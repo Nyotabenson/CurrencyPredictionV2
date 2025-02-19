@@ -14,7 +14,7 @@ st.title("CURRENCY PREDICTIONS")
 st.subheader("VERSION 2")
 st.write("##")
 st.markdown('<span style="color:blue;">The model in this application has been trained with more outsourced and relevant data, significantly improving its accuracy.</span>', unsafe_allow_html=True)
-st.markdown('<span style="color:green;">Kenya Foreign Exchange Reserve is: 10441.5</span>', unsafe_allow_html=True)
+st.markdown('<span style="color:green;">Kenya Foreign Exchange Reserve is: 16023.8</span>', unsafe_allow_html=True)
 
 st.write("---")
 
@@ -66,7 +66,7 @@ df['US_election'] = st.selectbox("Is the given date an election year in United S
 st.markdown("[Check US Interest Rate](https://fred.stlouisfed.org/series/DGS1)")
 
 df['Interest-rate'] = float(st.number_input("Enter the US Interest Rate."))
-df['kenya_reserves'] = float(10441.5)
+df['kenya_reserves'] = float(16023.8)
 if st.button("Predict"):
     if (df['Interest-rate'] == 0).any():
         st.error("Interest Rate is NULL!!")
