@@ -11,7 +11,7 @@ import os
 port = os.environ.get('PORT', 8501)
 
 st.title("CURRENCY PREDICTIONS")
-st.subheader("VERSION 2")
+st.subheader("V2.0.1")
 st.write("##")
 st.markdown('<span style="color:blue;">The model in this application has been trained with more outsourced and relevant data, significantly improving its accuracy.</span>', unsafe_allow_html=True)
 #st.markdown('<span style="color:green;">Kenya Foreign Exchange Reserve is: 16023.8</span>', unsafe_allow_html=True)
