@@ -14,7 +14,7 @@ st.title("CURRENCY PREDICTIONS")
 st.subheader("VERSION 2")
 st.write("##")
 st.markdown('<span style="color:blue;">The model in this application has been trained with more outsourced and relevant data, significantly improving its accuracy.</span>', unsafe_allow_html=True)
-st.markdown('<span style="color:green;">Kenya Foreign Exchange Reserve is: 16023.8</span>', unsafe_allow_html=True)
+#st.markdown('<span style="color:green;">Kenya Foreign Exchange Reserve is: 16023.8</span>', unsafe_allow_html=True)
 
 st.write("---")
 
@@ -63,10 +63,22 @@ df = pd.DataFrame([extract_date_features(date)])
 df['election-year'] = st.selectbox("Is the given date an election year in Kenya?", options)
 df['US_election'] = st.selectbox("Is the given date an election year in United State of America?", options)
 
-st.markdown("[Check US Interest Rate](https://fred.stlouisfed.org/series/DGS1)")
+col11, col22 = st.columns(2)
+with col11:
+    st.image("ir.png")
+with col22:
+    st.image("kfer.png")
 
-df['Interest-rate'] = float(st.number_input("Enter the US Interest Rate."))
-df['kenya_reserves'] = float(16023.8)
+col1, col2 = st.columns(2)
+with col1:
+    st.markdown("[Check US Interest Rate](https://fred.stlouisfed.org/series/DGS1)")
+
+    df['Interest-rate'] = float(st.number_input("Enter the US Interest Rate."))
+with col2:
+    st.markdown("[Google Kenya Foreign Exchange Rates](https://www.google.com/)")
+    df['kenya_reserves'] = float(st.number_input("Enter Kenya Exchange Rate."))
+
+
 if st.button("Predict"):
     if (df['Interest-rate'] == 0).any():
         st.error("Interest Rate is NULL!!")
