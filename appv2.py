@@ -69,8 +69,8 @@ with col1:
 
     df['Interest-rate'] = float(st.number_input("Enter the US Interest Rate."))
 with col2:
-    st.markdown("[Google Kenya Foreign Exchange Rates](https://www.google.com/)")
-    df['kenya_reserves'] = float(st.number_input("Enter Kenya Exchange Rate."))
+    st.markdown("[Google Kenya Foreign Exchange Reserves](https://www.google.com/)")
+    df['kenya_reserves'] = float(st.number_input("Enter Kenya Exchange Reserves."))
 
 
 if st.button("Predict"):
