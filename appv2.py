@@ -63,12 +63,6 @@ df = pd.DataFrame([extract_date_features(date)])
 df['election-year'] = st.selectbox("Is the given date an election year in Kenya?", options)
 df['US_election'] = st.selectbox("Is the given date an election year in United State of America?", options)
 
-col11, col22 = st.columns(2)
-with col11:
-    st.image("ir.png")
-with col22:
-    st.image("kfer.png")
-
 col1, col2 = st.columns(2)
 with col1:
     st.markdown("[Check US Interest Rate](https://fred.stlouisfed.org/series/DGS1)")
