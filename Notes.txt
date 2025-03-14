@@ -1,1 +1,7 @@
-Adding more features
+try out the following models:
+- Bayesian ridge
+- support vector machine along with multi-layer perceptron
+
+
+#CHALLENGES
+- data collected had unformatted columns like the date column
