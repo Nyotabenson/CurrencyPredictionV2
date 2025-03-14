@@ -95,7 +95,7 @@ if st.button("Predict"):
             #st.dataframe(df)
 
             # Model
-            model = joblib.load("KNeighbors.pkl")
+            model = joblib.load("randomforest.pkl")
 
             pred = model.predict(df)
             col1, col2 = st.columns(2)
@@ -103,7 +103,7 @@ if st.button("Predict"):
               st.write("Currency Prediction is:" , pred)
             with col2:
               st.markdown("Accuracy:") 
-              st.markdown("99.82749175581642%")
+              st.markdown("99.72594546924234%")
         except Exception as e:
             st.write(" error: ", e)
             # st.error("Step 1: Make sure, all data provided is correct,")
