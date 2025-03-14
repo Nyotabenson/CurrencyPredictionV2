@@ -13,7 +13,7 @@ port = os.environ.get('PORT', 8501)
 st.title("CURRENCY PREDICTIONS")
 st.subheader("V2.0.1")
 st.write("##")
-st.markdown('<span style="color:blue;">The model in this application has been trained with more outsourced and relevant data, significantly improving its accuracy.</span>', unsafe_allow_html=True)
+st.markdown('<span style="color:blue;">Make sure to use consistent data to get correct predictions.</span>', unsafe_allow_html=True)
 #st.markdown('<span style="color:green;">Kenya Foreign Exchange Reserve is: 16023.8</span>', unsafe_allow_html=True)
 
 st.write("---")
@@ -62,6 +62,8 @@ df = pd.DataFrame([extract_date_features(date)])
 # Add more columns through input features
 df['election-year'] = st.selectbox("Is the given date an election year in Kenya?", options)
 df['US_election'] = st.selectbox("Is the given date an election year in United State of America?", options)
+
+st.markdown('<span style="color:grey;">Click on the links provided to get factual data.</span>', unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
 with col1:
